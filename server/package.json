@@ -1,0 +1,39 @@
+{
+    "name": "server",
+    "version": "1.0.0",
+    "description": "webServer on node by koa2",
+    "main": "app.js",
+    "scripts": {
+        "dev": "cross-env LOCAL_NODE_ENV=dev nodemon --inspect ./bin/app.js ",
+        "test": "cross-env LOCAL_NODE_ENV=test nodemon --inspect ./bin/app.js ",
+        "test2": "cross-env LOCAL_NODE_ENV=test2 nodemon --inspect ./bin/app.js ",
+        "pm": "cross-env LOCAL_NODE_ENV=pm nodemon  --inspect ./bin/app.js",
+        "start": "nodemon  --inspect ./bin/app.js"
+    },
+    "keywords": [
+        "koa2",
+        "node",
+        "server"
+    ],
+    "author": "vshen",
+    "license": "MIT",
+    "dependencies": {
+        "axios": "^0.18.0",
+        "cross-env": "^6.0.0",
+        "crypto": "^1.0.1",
+        "form-data": "^2.3.3",
+        "ip": "^1.1.5",
+        "koa": "^2.5.1",
+        "koa-body": "^4.0.4",
+        "koa-bodyparser": "^4.2.0",
+        "koa-cors": "0.0.16",
+        "koa-router": "^7.4.0",
+        "koa-session": "^5.8.3",
+        "koa-static": "^4.0.3",
+        "log4js": "^2.7.0",
+        "node-uuid": "^1.4.8",
+        "nodemon": "^1.8.1",
+        "pm2": "^2.10.3",
+        "qs": "^6.5.2"
+    }
+}

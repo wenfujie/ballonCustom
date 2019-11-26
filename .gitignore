@@ -1,0 +1,35 @@
+.DS_Store
+node_modules
+/dist
+
+# local env files
+.env.local
+.env.*.local
+
+# Log files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Editor directories and files
+.idea
+.vscode
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw*
+
+#static sourse
+spweb3d
+appstore
+
+server/logs
+docker
+.gitlab-ci.yml
+Dockerfile
+# src/pages/goods/test.vue
+# config
+# util
+# bin
+# uploads

@@ -1,0 +1,72 @@
+dev:
+  ballon-custom:
+    env:
+      NODE_ENV: dev
+      SERVICE_API: http://qishon-zuul-gateway
+      TOKEN_API: http://qishon-zuul-gatewa/uaa/oauth-client/token
+      OSS_API: http://qishon-zuul-gateway/file/oss
+      NETTY_API: http://1.1.2.50:2081/api
+    svc:
+      nodePort:
+      - from: 3000
+        to: 3302
+test:
+  ballon-custom:
+    env:
+      NODE_ENV: test
+      SERVICE_API: http://qishon-zuul-gateway
+      TOKEN_API: http://qishon-zuul-gateway/uaa/oauth-client/token
+      OSS_API: http://qishon-zuul-gateway/file/oss
+      NETTY_API: http://1.1.2.50:2080/api
+    svc:
+      nodePort:
+      - from: 3000
+        to: 3303
+test2:
+  ballon-custom:
+    env:
+      NODE_ENV: test2
+      SERVICE_API: http://qishon-zuul-gateway
+      TOKEN_API: http://qishon-zuul-gateway/uaa/oauth-client/token
+      OSS_API: http://qishon-zuul-gateway/file/oss
+      NETTY_API: http://1.1.2.50:2082/api
+    svc:
+      nodePort:
+      - from: 3000
+        to: 3304
+prod:
+  ballon-custom:
+    replicas: 4
+    env:
+      NODE_ENV: prod
+      SERVICE_API: http://qishon-zuul-gateway
+      TOKEN_API: http://qishon-zuul-gateway/uaa/oauth-client/token
+      OSS_API: http://qishon-zuul-gateway/file/oss
+    livenessProbe:
+      tcpSocket:
+        port: 3000
+      initialDelaySeconds: 30
+      periodSeconds: 30
+preprod:
+  ballon-custom:
+    replicas: 4
+    env:
+      NODE_ENV: preprod
+      SERVICE_API: http://qishon-zuul-gateway
+      TOKEN_API: http://qishon-zuul-gateway/uaa/oauth-client/token
+      OSS_API: http://qishon-zuul-gateway/file/oss
+business:
+  ballon-custom:
+    replicas: 4
+    env:
+      NODE_ENV: prod
+      SERVICE_API: http://qishon-zuul-gateway
+      NETTY_API: http://qishon-openresty:2080/api/
+      TOKEN_API: http://qishon-zuul-gateway/uaa/oauth-client/token
+      OSS_API: http://qishon-zuul-gateway/file/oss
+      SHOP_CLIENT_ID: wissClient
+      SHOP_CLIENT_SECRET: wissClientSecret
+    svc:
+      nodePort:
+      - from: 3000
+        to: 30172

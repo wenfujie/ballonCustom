@@ -1,0 +1,8 @@
+{
+    "dev": {
+        "ecshopIframeUrl": "http://qsuat.qishon.com/ballon-ecshop/#/"
+    },
+    "prod": {
+        "ecshopIframeUrl": "http://dz.chinaballon.com/#/"
+    }
+}

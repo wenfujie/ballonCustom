@@ -1,0 +1,61 @@
+/**公共样式**/
+.fl{
+    float: left;
+}
+.fr{
+    float: right;
+}
+.clearfix{
+    zoom:1;
+    display: block;
+}
+.clearfix:after{display:block;clear:both;content:"";visibility:hidden;height:0}
+.text-overhidden{
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.none{
+    display: none;
+}
+
+
+/**********3D定制样式********BEGIN**/
+.com-web-design{
+    //max-width: 1200px;
+    width: 100%;
+    min-width: 990px;
+    min-height: 710px;
+    background: pink;
+    margin: 0 auto;
+}
+.com-web-shadow-more{
+    box-shadow: 0 0 20px #CDCDC1;
+}
+.com-web-shadow-less{
+    box-shadow: 0 0 8px #CDCDC1;
+}
+.operate-btn-box {
+    display: flex;
+    align-items: center;
+    .collect-box {
+        width: 60px;
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
+        i {
+            font-size: 20px;
+            cursor: pointer;
+        }
+    }
+}
+/**圆角+阴影**/
+.com-radius-shadow{
+    border-radius:4px;
+    box-shadow: 0 0 8px #CDCDC1;
+}
+.com-border-r6{
+    border-radius:6px;
+}
+/**********3D定制样式********END**/
